@@ -1,0 +1,84 @@
+# Protocol configurations
+
+protocols:
+  aave:
+    name: "Aave"
+    version: "v3"
+    website: "https://aave.com"
+    chains: ["ethereum", "arbitrum", "polygon", "base", "avalanche"]
+    risk_score: 2.0
+    audit_count: 8
+    launch_date: "2020-01-08"
+    contracts:
+      ethereum:
+        pool: "0x87870Bca3F3fD6335C3F4ce8392D69350B4fA4E2"
+        oracle: "0x54586bE62E3c3580375aE3723C145253060Ca0C2"
+      arbitrum:
+        pool: "0x794a61358D6845594F94dc1DB02A252b5b4814aD"
+        oracle: "0xb56c2F0B653B2e0b10C9b928C8580Ac5Df02C7C7"
+      polygon:
+        pool: "0x794a61358D6845594F94dc1DB02A252b5b4814aD"
+        oracle: "0xb023e9209D6E38E5A7D2d3a414Fb8f824F0Bb99C"
+      base:
+        pool: "0xA238Dd80C259a72e81d7e4664a9801593F98d1c5"
+        oracle: "0x2Cc0Fc26eD4563A5ce5e8bdcfe1A2878676Ae156"
+      avalanche:
+        pool: "0x794a61358D6845594F94dc1DB02A252b5b4814aD"
+        oracle: "0xEBd36016B3eD09D4693Ed4251c67Bd858c3c7C9C"
+
+  compound:
+    name: "Compound"
+    version: "v3"
+    website: "https://compound.finance"
+    chains: ["ethereum", "arbitrum", "base", "polygon"]
+    risk_score: 2.5
+    audit_count: 6
+    launch_date: "2018-09-01"
+    contracts:
+      ethereum:
+        comet_usdc: "0xc3d688B66703497DAA19211EEdff47f25384cdc3"
+        comet_weth: "0xA17581A9E3356d9A858b789D68B4d866e593aE94"
+      arbitrum:
+        comet_usdc: "0xA5EDBDD9646f8dFF606d7448e414884C7d905dCA"
+      base:
+        comet_usdc: "0xb125E6687d4313864e53df431d5425969c15Eb2F"
+      polygon:
+        comet_usdc: "0xF25212E676D1F7F89Cd72fFEe66158f541246445"
+
+  morpho:
+    name: "Morpho"
+    version: "blue"
+    website: "https://morpho.org"
+    chains: ["ethereum", "base"]
+    risk_score: 3.0
+    audit_count: 4
+    launch_date: "2022-06-01"
+    contracts:
+      ethereum:
+        morpho_blue: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb"
+      base:
+        morpho_blue: "0xBBBBBbbBBb9cC5e90e3b3Af64bdAF62C37EEFFCb"
+
+  benqi:
+    name: "Benqi"
+    version: "v2"
+    website: "https://benqi.fi"
+    chains: ["avalanche"]
+    risk_score: 3.5
+    audit_count: 3
+    launch_date: "2021-06-01"
+    contracts:
+      avalanche:
+        lending: "0x2b2C81e08f1Af8835a78Bb2A90AE924ACE0eA4bE"
+
+  radiant:
+    name: "Radiant"
+    version: "v2"
+    website: "https://radiant.capital"
+    chains: ["arbitrum"]
+    risk_score: 4.0
+    audit_count: 2
+    launch_date: "2022-10-01"
+    contracts:
+      arbitrum:
+        lending: "0xF4B14861775373d38378B60F588014B1004eeB30"

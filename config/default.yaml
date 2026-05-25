@@ -1,0 +1,57 @@
+# Default configuration for DeFi Lending Rate Aggregator
+
+app:
+  name: "defi-lending-aggregator"
+  version: "0.5.0"
+  environment: "development"
+  log_level: "info"
+
+server:
+  host: "0.0.0.0"
+  port: 8080
+  read_timeout: 30s
+  write_timeout: 30s
+
+database:
+  host: "localhost"
+  port: 5432
+  name: "defi_rates"
+  user: "postgres"
+  password: "${DATABASE_PASSWORD}"
+  max_connections: 20
+  ssl_mode: "disable"
+
+redis:
+  url: "redis://localhost:6379"
+  pool_size: 10
+  cache_ttl: 30s
+
+rate_fetching:
+  interval: 60s
+  timeout: 15s
+  max_retries: 3
+  retry_delay: 5s
+  batch_size: 50
+
+alerts:
+  enabled: true
+  check_interval: 30s
+  thresholds:
+    rate_change_pct: 5.0
+    utilization_critical: 95.0
+    health_factor_warning: 1.5
+
+risk_model:
+  weights:
+    protocol_age: 0.15
+    tvl: 0.20
+    audit_count: 0.15
+    utilization: 0.20
+    smart_contract_risk: 0.15
+    governance_risk: 0.15
+
+optimizer:
+  min_apy: 0.5
+  max_risk_score: 7.0
+  diversification_bonus: 0.1
+  rebalance_threshold: 1.0

@@ -1,0 +1,52 @@
+# Chain configurations
+
+chains:
+  ethereum:
+    name: "Ethereum"
+    chain_id: 1
+    rpc_url: "${ETHEREUM_RPC_URL}"
+    explorer_url: "https://etherscan.io"
+    block_time: 12
+    native_token: "ETH"
+    wrapped_native: "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    multicall: "0xcA11bde05977b3631167028862bE2a173976CA11"
+
+  arbitrum:
+    name: "Arbitrum One"
+    chain_id: 42161
+    rpc_url: "${ARBITRUM_RPC_URL}"
+    explorer_url: "https://arbiscan.io"
+    block_time: 0.25
+    native_token: "ETH"
+    wrapped_native: "0x82aF49447D8a07e3bd95BD0d56f35241523fBab1"
+    multicall: "0xcA11bde05977b3631167028862bE2a173976CA11"
+
+  polygon:
+    name: "Polygon"
+    chain_id: 137
+    rpc_url: "${POLYGON_RPC_URL}"
+    explorer_url: "https://polygonscan.com"
+    block_time: 2
+    native_token: "MATIC"
+    wrapped_native: "0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270"
+    multicall: "0xcA11bde05977b3631167028862bE2a173976CA11"
+
+  base:
+    name: "Base"
+    chain_id: 8453
+    rpc_url: "${BASE_RPC_URL}"
+    explorer_url: "https://basescan.org"
+    block_time: 2
+    native_token: "ETH"
+    wrapped_native: "0x4200000000000000000000000000000000000006"
+    multicall: "0xcA11bde05977b3631167028862bE2a173976CA11"
+
+  avalanche:
+    name: "Avalanche"
+    chain_id: 43114
+    rpc_url: "${AVALANCHE_RPC_URL}"
+    explorer_url: "https://snowtrace.io"
+    block_time: 2
+    native_token: "AVAX"
+    wrapped_native: "0xB31f66AA3C1e785363F0875A1B74E27b85FD66c7"
+    multicall: "0xcA11bde05977b3631167028862bE2a173976CA11"

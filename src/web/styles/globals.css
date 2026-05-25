@@ -1,0 +1,74 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #818cf8;
+  --color-primary-dark: #6366f1;
+  --color-bg: #0f172a;
+  --color-surface: #1e293b;
+  --color-border: #334155;
+  --color-text: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-success: #34d399;
+  --color-warning: #fbbf24;
+  --color-danger: #f87171;
+}
+
+body {
+  @apply bg-[var(--color-bg)] text-[var(--color-text)];
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer components {
+  .card {
+    @apply rounded-xl border border-[var(--color-border)] bg-[var(--color-surface)] p-6 shadow-lg;
+  }
+
+  .btn-primary {
+    @apply rounded-lg bg-[var(--color-primary)] px-4 py-2 text-white font-medium
+           hover:bg-[var(--color-primary-dark)] transition-colors duration-200;
+  }
+
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply badge bg-emerald-900/50 text-emerald-400;
+  }
+
+  .badge-warning {
+    @apply badge bg-amber-900/50 text-amber-400;
+  }
+
+  .badge-danger {
+    @apply badge bg-red-900/50 text-red-400;
+  }
+
+  .table-header {
+    @apply px-4 py-3 text-left text-xs font-medium uppercase tracking-wider text-[var(--color-text-secondary)];
+  }
+
+  .table-cell {
+    @apply px-4 py-3 text-sm;
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-[var(--color-bg)];
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-[var(--color-border)] rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-slate-500;
+}
